@@ -6,7 +6,7 @@
   <title>LMS Platform</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
+<body>
     <nav class="navbar bg-primary" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand text-white" href="index.html">LMS</a>
@@ -15,23 +15,25 @@
                 <a class="nav-link text-white" href="#courses">Courses</a>
                 <a class="nav-link text-white" href="#about">About</a>
                 <a class="nav-link text-white" href="#contact">Contact</a>
+                <button id="darkToggle" class="btn btn-outline-light btn-sm">Dark Mode</button>
             </div>
+            
         </div>
     </nav>
-<body>
-  <section id="home" class="bg-white text-center py-5">
+
+  <section id="home" class="bg-body text-center py-5">
     <div class="container">
-      <h1 class="display-5 fw-bold">Welcome to the LMS Platform</h1>
+      <h1 class="display-4"><span id="greeting"></span><br>Welcome to the LMS Platform</h1>
       <p class="card-text">Your getway to knowledge and success.Explore a wide variety of courses and resources.</p>
       <a href="#" class="btn btn-primary">Get Started</a>
     </div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
 </html>
 <!-- Features -->
-<section id="features" class="bg-light text-center py-5">
+<section id="features" class="bg-body-tertiary text-center py-5">
   <div class="container">
     <h2 class="mb-4">Features</h2>
 
@@ -40,25 +42,25 @@
       <div class="col-md-4">
         <div class="fs-1 text-primary" aria-hidden="true"><i class="bi bi-book"></i></div>
         <h3 class="h5">Extensive Course Library</h3>
-        <p class="text-muted">Access courses in a variety of fields and skill levels.</p>
+        <p class="text-body-secondary">Access courses in a variety of fields and skill levels.</p>
       </div>
 
       <div class="col-md-4">
         <div class="fs-1 text-primary" aria-hidden="true"><i class="bi bi-person-video3"></i></div>
         <h3 class="h5">Iteractive Discussions</h3>
-        <p class="text-muted">Engage in live discussions and group projects.</p>
+        <p class="text-body-secondary">Engage in live discussions and group projects.</p>
       </div>
 
       <div class="col-md-4">
         <div class="fs-1 text-primary" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></div>
         <h3 class="h5">Certifications</h3>
-        <p class="text-muted">Earn Certifications to showcase your achivements.</p>
+        <p class="text-body-secondary">Earn Certifications to showcase your achivements.</p>
       </div>
 
     </div>
   </div>
 </section>
-<h1 class="bg-light text-center py-5">Popular Courses</h1>
+<h1 class="bg-body-tertiary text-center py-5">Popular Courses</h1>
 <div class="contains-inline">
   <div class="card-group">
   <div class="card">
@@ -89,7 +91,7 @@
 </div>
 
     <footer class="bg-primary text-white text-center py-3 ">
-        <div class="cossntainer">
+        <div class="container">
           <p class="">&copy; 2024 LMS Platform. All Rights Reserved.</p>
           <a href="#" class="text-white">Privacy Policy</a>
           <span class="mx-2">|</span>
@@ -97,3 +99,31 @@
         </p>
         </div> 
     </footer>    
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+  const hour = new Date().getHours();
+  let greeting;
+
+  if (hour < 12) {
+    greeting = "Good Morning";
+  } else if (hour < 16) {
+    greeting = "Good Afternoon";
+  } else {
+    greeting = "Good Evening";
+  }
+  document.getElementById("greeting").textContent = greeting;
+ 
+
+    const toggleBtn = document.getElementById("darkToggle");
+
+    toggleBtn.addEventListener("click",function(){
+      const isDark = document.body.classList.toggle("dark-mode");
+      document.documentElement.setAttribute("data-bs-theme",isDark? "dark" : "light");
+      toggleBtn.textContent = isDark ?"Light Mode" : "Dark Mode";
+    });
+  </script>
+  </body>
+  </html>
