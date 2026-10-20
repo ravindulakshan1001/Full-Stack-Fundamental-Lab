@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMS Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar bg-primary" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html">LMS</a>
+            <div class="nav">
+                <a class="nav-link text-white" href="#home">Home</a>
+                <a class="nav-link text-white" href="#courses">Courses</a>
+                <a class="nav-link text-white" href="#about">About</a>
+                <a class="nav-link text-white" href="#contact">Contact</a>
+                <button id="darkToggle" class="btn btn-outline-light btn-sm">Dark Mode</button>
+            </div>
+            
+        </div>
+    </nav>
+
+  <section id="home" class="bg-body text-center py-5">
+    <div class="container">
+      <h1 class="display-4"><span id="greeting"></span><br>Welcome to the LMS Platform</h1>
+      <p class="card-text">Your getway to knowledge and success.Explore a wide variety of courses and resources.</p>
+      <a href="#" class="btn btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
+<!-- Features -->
+<section id="features" class="bg-body-tertiary text-center py-5">
+  <div class="container">
+    <h2 class="mb-4">Features</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="fs-1 text-primary" aria-hidden="true"><i class="bi bi-book"></i></div>
+        <h3 class="h5">Extensive Course Library</h3>
+        <p class="text-body-secondary">Access courses in a variety of fields and skill levels.</p>
+      </div>
+
+      <div class="col-md-4">
+        <div class="fs-1 text-primary" aria-hidden="true"><i class="bi bi-person-video3"></i></div>
+        <h3 class="h5">Iteractive Discussions</h3>
+        <p class="text-body-secondary">Engage in live discussions and group projects.</p>
+      </div>
+
+      <div class="col-md-4">
+        <div class="fs-1 text-primary" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></div>
+        <h3 class="h5">Certifications</h3>
+        <p class="text-body-secondary">Earn Certifications to showcase your achivements.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<h1 class="bg-body-tertiary text-center py-5">Popular Courses</h1>
+<div class="contains-inline">
+  <div class="card-group">
+  <div class="card">
+    <img src="Images/web.jpg" class="card-img-top" alt="..." width="100%" height="250px">
+    <div class="card-group">
+      <h4 class="card-title">Web Developer</h4>
+      <p class="card-text">Learn to build modern, responsive websites using HTML, CSS, JavaScript.</p>
+      <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="Images/data.jpg" class="card-img-top" alt="..." width="100%" height="250px">
+    <div class="card-group">
+      <h4 class="card-title">Data Science</h4>
+      <p class="card-text">Master data analysis, visualization, and machine learning techniques.</p>
+      <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="Images/digital.jpg" class="card-img-top" alt="..." width="100%" height="250px">
+    <div class="card-group">
+      <h4 class="card-title">Digital Marketing</h4>
+      <p class="card-text">Understand SEO,social media marketing and online branding stratagies.</p>
+      <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+  </div>
+</div>
+
+    <footer class="bg-primary text-white text-center py-3 ">
+        <div class="cossntainer">
+          <p class="">&copy; 2024 LMS Platform. All Rights Reserved.</p>
+          <a href="#" class="text-white">Privacy Policy</a>
+          <span class="mx-2">|</span>
+          <a href="#" class="text-white">Terms of Use</a>
+        </p>
+        </div> 
+    </footer>    
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+/* Greeting */
+  const hour = new Date().getHours();
+  let greeting;
+
+  if (hour < 12) {
+    greeting = "Good Morning";
+  } else if (hour < 16) {
+    greeting = "Good Afternoon";
+  } else {
+    greeting = "Good Evening";
+  }
+  document.getElementById("greeting").textContent = greeting;
+
+    /*Dark Mode*/
+    const toggleBtn = document.getElementById("darkToggle");
+
+    toggleBtn.addEventListener("click",function(){
+      const isDark = document.body.classList.toggle("dark-mode");
+      document.documentElement.setAttribute("data-bs-theme",isDark? "dark" : "light");
+      toggleBtn.textContent = isDark ?"Light Mode" : "Dark Mode";
+    });
+  </script>
+  </body>
+  </html>
