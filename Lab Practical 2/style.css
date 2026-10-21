@@ -1,0 +1,121 @@
+* {box-sizing: border-box;}
+body{
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    color: #7f888f;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+
+}
+h1,h2,h3,logo,button{
+    font-family: Georgia, serif;
+    color: #304449;
+
+}
+h1{font-size: 42px;line-height: 1.3;margin-bottom: 12px;}
+h2,section-title{
+    display: table;
+    font-size: 20px;
+    border-bottom: 3px solid#f56a6a;
+    padding-bottom: 10px;
+    margin: 0 0 40px;
+}
+h3{
+    font-size: 18px;
+    margin: 18px 0 10px;
+
+}
+p{margin: 0 0 25px;}
+a{color: inherit;text-decoration: none;}
+a:hover,:active{color:#f56a6a;}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0 24px;
+    border-bottom: 1px solid #e8eaeb;
+    margin-bottom: 60px;
+}
+.logo {
+    font-size: 22px;
+    color: #304449;
+}
+.banner {
+    height: 320px;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+.subtitle {
+    font-size: 20px;
+    font-family: Georgia, serif;
+    color: #a0aaaf;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+img {width: 100%;
+    display: block;
+}
+
+nav a {
+
+    margin-left: 20px ;
+    margin-right: 40px; 
+    font-size: 16px; color: #3d4449;
+}
+.intro {
+    padding-bottom: 40px;
+    border-bottom:2px solid #e8e8e8;
+    margin-bottom: 40px; 
+}
+.intro p{
+    max-width: 700px;
+}
+.button{
+    display: inline-block;
+    padding: 8px 18px;
+    border: 2px solid #f56a6a;
+    border-radius: 4px;
+    color: #f56a6a;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.button:hover{
+    background: #f56a6a;
+    color: #ffffff;
+}
+.features, .projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 30px 60px;
+}
+.feature {
+    display: flex;
+     gap:30px;
+}
+.icon{
+    flex: 0 0 70px ; 
+    font-size: 42px;
+    line-height: 2.5; 
+    color: #f56a6a;
+    text-align:  center;
+}
+.section-title{
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.projects {gap: 40px 50px;}
+.projects img {
+    width: 100%;
+    aspect-ratio: 3/2 ;
+    object-fit: cover ;
+}
+.projects h3{
+    font-size: 20px;
+    margin: 18px 0 8px;
+}
+.projects p{margin-top: 18px;}
+footer{margin-top: 50px; font-size : 13
